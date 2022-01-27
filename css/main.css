@@ -96,6 +96,10 @@ h1.company-name {
   color: #d6c78e;
 }
 
+h1.company-name span {
+  font-size: 0.7em;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -115,7 +119,7 @@ h1.company-name {
 
 .section-title::before {
   position: absolute;
-  bottom: -.1em;
+  bottom: -0.1em;
   left: 0;
   width: 40px;
   height: 2px;
@@ -242,10 +246,10 @@ h1.company-name {
   background-color: #fff;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   z-index: 10;
 }
 
@@ -267,8 +271,8 @@ h1.company-name {
   color: #191919;
   text-transform: uppercase;
   text-decoration: none;
-  -webkit-transition: color .3s;
-  transition: color .3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .nav__link:hover {
@@ -299,8 +303,8 @@ h1.company-name {
   border: 1px solid transparent;
   border-radius: 8px;
   background-color: #232323;
-  -webkit-transition: background-color .3s, border .3s;
-  transition: background-color .3s, border .3s;
+  -webkit-transition: background-color 0.3s, border 0.3s;
+  transition: background-color 0.3s, border 0.3s;
   z-index: 5;
 }
 
@@ -356,6 +360,120 @@ h1.company-name {
   grid-column: 1/-1;
 }
 
+.info {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'title' 'box' 'box';
+  padding: 6em 2em;
+}
+
+.info__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.info__boxes {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: box;
+}
+
+.info__box-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: sepia();
+          filter: sepia();
+}
+
+.info__box-title {
+  margin: 0.3em 0;
+  font-size: 2.6rem;
+  color: #d6c78e;
+  font-weight: 200;
+}
+
+.info__box-text {
+  margin-bottom: 0.5em;
+}
+
+.info__bg-icon {
+  display: none;
+}
+
+.info__box-link {
+  display: block;
+  margin-bottom: 2em;
+  font-weight: bold;
+  color: #d6c78e;
+  text-align: right;
+  text-decoration: none;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.info__box-link:hover {
+  color: #9b9165;
+}
+
+@media (min-width: 576px) {
+  .info {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "title box" "title box";
+    padding: 10em 2em;
+  }
+  .info__box {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .info__title {
+    padding: 0 1em;
+  }
+  .info__box-img, .info__box-text {
+    max-width: 500px;
+  }
+  .info__bg-icon {
+    position: absolute;
+    display: block;
+    opacity: 0.05;
+    z-index: -5;
+  }
+  .info__bg-icon--one {
+    top: 14%;
+    width: 20%;
+    -webkit-animation: rotate-right 160s infinite linear;
+            animation: rotate-right 160s infinite linear;
+  }
+  .info__bg-icon--two {
+    bottom: 10%;
+    left: 10%;
+    width: 30%;
+    -webkit-animation: rotate-left 140s infinite linear;
+            animation: rotate-left 140s infinite linear;
+  }
+  .info__bg-icon--three {
+    top: 26%;
+    left: 16%;
+    width: 50%;
+    -webkit-animation: rotate-left 160s infinite linear;
+            animation: rotate-left 160s infinite linear;
+  }
+  .info__bg-icon--four {
+    top: 55%;
+    left: -10%;
+    width: 15%;
+    -webkit-animation: rotate-right 140s infinite linear;
+            animation: rotate-right 140s infinite linear;
+  }
+}
+
 @media (min-width: 768px) {
   .cards__box {
     padding: 10em 2em;
@@ -387,6 +505,12 @@ h1.company-name {
 }
 
 @media (min-width: 992px) {
+  .section-title {
+    font-size: 4.8rem;
+  }
+  .section-title::before {
+    height: 4px;
+  }
   h1.company-name {
     font-size: 6rem;
   }
