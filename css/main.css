@@ -102,6 +102,31 @@ h1.company-name {
   width: 100%;
 }
 
+.section-title {
+  position: relative;
+  margin: 0 auto 2em;
+  font-size: 3.2rem;
+  color: #d6c78e;
+  font-weight: 200;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.section-title::before {
+  position: absolute;
+  bottom: -.1em;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #d6c78e;
+  content: '';
+}
+
+.section-title span {
+  font-weight: 900;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
