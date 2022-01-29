@@ -411,12 +411,83 @@ h1.company-name span {
   color: #d6c78e;
   text-align: right;
   text-decoration: none;
-  -webkit-transition: color .3s;
-  transition: color .3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .info__box-link:hover {
   color: #9b9165;
+}
+
+.plans {
+  padding: 6em 2em;
+  background-color: #191919;
+}
+
+.plans__box {
+  margin: 1em 0;
+  padding: 2em 1em;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #232323;
+  cursor: pointer;
+}
+
+.plans__box:hover {
+  background-color: #191919;
+  border: 1px solid #d6c78e;
+}
+
+.plans__item {
+  margin: 1em 0;
+}
+
+.plans__item-icon {
+  width: 50px;
+}
+
+.plans__item-name {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  font-size: 1.8rem;
+  color: #d6c78e;
+}
+
+.newsletter {
+  padding: 8em 2em;
+  background-color: #A01C35;
+  text-align: center;
+}
+
+.newsletter__text {
+  margin-bottom: 1em;
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+.newsletter__form input {
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+
+.newsletter__form button {
+  padding: 1em;
+  border: 1px solid #d6c78e;
+  background-color: none;
+  color: #d6c78e;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: background-color .3s, color .3s;
+  transition: background-color .3s, color .3s;
+}
+
+.newsletter__form button:hover {
+  color: red;
+  background-color: #d6c78e;
 }
 
 @media (min-width: 576px) {
@@ -501,6 +572,25 @@ h1.company-name span {
     -ms-grid-column: 7;
     -ms-grid-column-span: 3;
     grid-column: 7/10;
+  }
+  .plans {
+    padding: 8em 2em;
+  }
+  .plans__box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .plans__item {
+    margin: 0 1em;
+  }
+  .plans__item-name {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 

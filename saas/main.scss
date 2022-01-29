@@ -27,9 +27,8 @@ h1.company-name {
 	font-family: 'Cinzel', serif;
 	color: $gold;
 
-	span{
+	span {
 		font-size: 0.7em;
-		
 	}
 }
 
@@ -289,7 +288,7 @@ h1.company-name {
 	}
 
 	&__bg-icon {
-		display: none
+		display: none;
 	}
 
 	&__box-link {
@@ -299,13 +298,87 @@ h1.company-name {
 		color: $gold;
 		text-align: right;
 		text-decoration: none;
-		transition: color .3s;
+		transition: color 0.3s;
 
 		&:hover {
 			color: $darkgold;
 		}
 	}
+}
 
+// plans
+
+.plans {
+	padding: 6em 2em;
+	background-color: $darker;
+
+	&__box {
+		margin: 1em 0;
+		padding: 2em 1em;
+		text-align: center;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		background-color: $dark;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $darker;
+			border: 1px solid $gold;
+		}
+	}
+
+	&__item {
+		margin: 1em 0;
+	}
+
+	&__item-icon {
+		width: 50px;
+	}
+
+	&__item-name {
+		margin-top: 0;
+		margin-bottom: 1.5em;
+		font-size: 1.8rem;
+		color: $gold;
+	}
+}
+//  newsletter
+
+.newsletter {
+	padding: 8em 2em;
+	background-color: $red;
+	text-align: center;
+
+	&__text {
+		margin-bottom: 1em;
+		font-size: 4rem;
+		font-weight: 200;
+	}
+
+	&__form {
+		input {
+			margin-bottom: 1em;
+			padding: 1em;
+			width: 100%;
+			background-color: $white;
+			border: 1px solid transparent;
+		}
+
+		button {
+			padding: 1em;
+			border: 1px solid $gold;
+			background-color: none;
+			color: $gold;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color .3s, color .3s;
+
+			&:hover{
+				color: red;
+				background-color: $gold;
+			}
+		}
+	}
 }
 
 @import './small';
